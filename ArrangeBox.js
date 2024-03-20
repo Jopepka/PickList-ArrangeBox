@@ -5,7 +5,7 @@ export class ArrangeBoxController {
         changeContainer: new Event('changeContainer', { bubbles: true })
     }
 
-    //Устанавливает свойство itemController для управление элементом
+    //Устанавливает свойство itemController для управления элементом
     static setItemController(item, data) {
 
         item.itemController = {
@@ -21,7 +21,6 @@ export class ArrangeBoxController {
             set canChangeContainer(isCan) {
                 item.setAttribute("canChangeContainer", isCan)
             },
-            // checkMatch(text) { return item.textContent.trim().toLowerCase().includes(text.trim().toLowerCase()) },
             appendToContainer(toContainer) {
                 if (this.canChangeContainer) {
                     toContainer.appendChild(item)
